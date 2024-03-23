@@ -4,6 +4,7 @@ import { links } from "@/lib/data";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,13 +28,19 @@ const NavBar = () => {
         <ul className=" flex  gap-2 text-sm items-center justify-center ">
           {links?.map((link) => {
             return (
-              <li className="hover:bg-gray-300 py-2 px-2 rounded-full">
+              <li
+                onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}
+                className="hover:border-b-2 border-[#000] py-2 px-2 "
+              >
                 {link?.name}
               </li>
             );
           })}
         </ul>
-        <div className="hidden hover:block h-[100px] bg-red-500"></div>
+        <div
+          className={`${isShown ? "block" : "hidden"} h-[100px] bg-red-500`}
+        ></div>
       </nav>
     </header>
   );
