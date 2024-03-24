@@ -1,20 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import searchIcon from "@/public/search-icon.png";
+import searchIcon from "@/public/search-icon.svg";
 const Header = () => {
   return (
     <>
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center p-4 ">
         {" "}
         <div>
           <Image
             src={searchIcon}
             alt=""
-            width="32"
-            height="32"
+            width="22"
+            height="22"
             quality="95"
             priority={true}
-            className=" h-88 w-88  object-cover border-[0.15rem] shadow-xl"
+            className=" "
           />
         </div>
         <div>
