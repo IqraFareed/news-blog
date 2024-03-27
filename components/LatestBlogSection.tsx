@@ -21,7 +21,7 @@ const LatestBlogSection = () => {
         be licked,” a new study suggests.
       </p>
       <p className="text-xs mt-2">3 MIN READ</p>
-      <Divider color="bg-gray-500" />
+      <Divider />
     </section>
   );
 };
