@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+.h2-font {
+  font-family: "nyt-cheltenham";
+  font-size: 1.25rem;
+
+  font-weight: bold;
+}

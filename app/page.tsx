@@ -1,18 +1,28 @@
 import BlogSection from "@/components/BlogSection";
 
 import LatestBlogSection from "@/components/LatestBlogSection";
-import NavBar from "@/components/NavBar";
-import Recepies from "@/components/Recepies";
+
+import Food from "@/components/Food";
+import Divider from "@/components/Divider";
+import Sports from "@/components/Sports";
 
 export default function Home() {
   return (
-    <main className="flex flex-col  px-16 h-[1000px] ">
-      <div className="flex">
-        {/* <BlogSection />
-        <LatestBlogSection /> */}
+    <main className="flex flex-col  px-12  mt-[5rem] ">
+      <div className="grid grid-cols-12 gap-x-1">
+        <div className="col-span-9">
+          {" "}
+          <BlogSection />
+        </div>
+        <div className="col-span-3">
+          {" "}
+          <LatestBlogSection />
+        </div>
       </div>
-
-      {/* <Recepies /> */}
+      <Divider />
+      <Sports />
+      <Divider />
+      <Food />
     </main>
   );
 }
