@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import imrs from "@/public/Hero-Month-1-3-1200x800.jpg";
+
 const Food = () => {
   return (
     <section>

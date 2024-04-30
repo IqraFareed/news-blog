@@ -1,12 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import imrs from "@/public/Hero-Month-1-3-1200x800.jpg";
-const Sports = () => {
+import { getRecipeices } from "@/lib/data";
+const Sports = async () => {
+  const data = await getRecipeices();
+  console.log(data.recipes, "data");
   return (
     <section>
       {" "}
-      <h2 className="h2-font">Sports</h2>
-      <div className="grid grid-cols-12 gap-x-1">
+      <h2 className="h2-font">
+        {/* {data.recipes?.map((d: any) => {
+          return d.name;
+        })} */}
+      </h2>
+      {/* <div className="grid grid-cols-12 gap-x-1">
         <div className="col-span-6">
           {" "}
           <div>
@@ -106,7 +113,7 @@ const Sports = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
